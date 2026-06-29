@@ -2,7 +2,7 @@ import pygame
 import sys
 from constants import SCREEN_WIDTH
 from constants import SCREEN_HEIGHT
-from constants import TEXT_FONT
+from constants import DEFAULT_TEXT_FONT
 from constants import SCORE_TEXT_SIZE
 from logger import log_state
 from logger import log_event
@@ -31,11 +31,10 @@ def main():
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = (updatable)
     Shot.containers = (shots, drawable, updatable)
-    Score.containers = (updatable)
 
 
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    score = Score(TEXT_FONT, SCORE_TEXT_SIZE)
+    score = Score(DEFAULT_TEXT_FONT, SCORE_TEXT_SIZE)
 
     asteroid_field = AsteroidField()
 

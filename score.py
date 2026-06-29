@@ -1,11 +1,11 @@
 import pygame
+from text import Text
 from constants import ASTEROID_POINT_VALUE
 from constants import SCREEN_WIDTH
 
-class Score():
+class Score(Text):
     def __init__(self, font, size):
-        self.font = font
-        self.size = size
+        super().__init__(font, size)
         self.points = 0
         self.text = pygame.font.SysFont(self.font, self.size)
 
